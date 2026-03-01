@@ -1,6 +1,6 @@
 
 import { ChevronDown } from "lucide-react";
-import heroImage from '../../public/heroimg.jpeg'
+import heroImage from '../../public/heroimg.webp'
 
 const Hero = () => {
     const scrollToSection = (id: string) => {
