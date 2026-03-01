@@ -6,9 +6,9 @@ const Accommodation = () => {
   
   // Sample images - replace with actual homestay images
   const images = [
-    "/Room1.png",
-    "/Room2.png",
-    "/Hall.jpg",
+    "/Room1.webp",
+    "/Room2.webp",
+    "/Hall.webp",
     "/Kitchen.webp"
   ];
 
