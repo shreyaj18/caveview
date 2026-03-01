@@ -6,7 +6,7 @@ const Places = () => {
             image: "/cave_temple.jpg",
             heading: "Cave Temple",
             subheading: "1km Away",
-            details: 'These remarkable rock-cut temples, originating in the 6th century, are adorned with detailed carvings and listed as a UNESCO World Heritage Site. They provide a fascinating window into India’s ancient architecture and spiritual traditions.'
+            details: 'These remarkable rock-cut temples, originating in the 6th century, are adorned with detailed carvings and listed as a UNESCO World Heritage Site. They provide a fascinating window into India\'s ancient architecture and spiritual traditions.'
         },
         {
             image: "/bhutnath_temple.jpg",
@@ -41,8 +41,8 @@ const Places = () => {
     ];
 
     return (
-        <div className="py-20 bg-gradient-to-b from-orange-50 to-amber-50 ">
-            <div className="grid grid-cols-3 gap-6 mx-8 justify-items-center">
+        <div className="py-12 md:py-20 bg-gradient-to-b from-orange-50 to-amber-50">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mx-4 md:mx-8 justify-items-center">
                 {cards.map((card, index) => (
                     <FlipCard
                         key={index}
@@ -53,9 +53,7 @@ const Places = () => {
                     />
                 ))}
             </div>
-
         </div>
-
     );
 };
 
