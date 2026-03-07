@@ -181,11 +181,11 @@ const BookNow = () => {
 
               <div className="text-center">
                 <a
-                  href="tel:+919538215757"
+                  href="tel:+91886133174"
                   className="text-orange-600 font-semibold text-md hover:underline"
                   style={{ fontFamily: "'Lato', sans-serif" }}
                 >
-                  Shwetha: +91 95382 15757 (Co-Host)
+                  Shwetha: +91 8861 33174 (Co-Host)
                 </a>
               </div>
             </div>
