@@ -1,13 +1,11 @@
-
-
 const FlipCard = ({ image, heading, subheading, details }: any) => {
   return (
     <>
       <style>{`
         .flip-card {
           overflow: visible;
-          width: 400px;
-          height: 280px;
+          width: 350px;
+          height: 210px;
         }
 
         .flip-content {
@@ -15,8 +13,8 @@ const FlipCard = ({ image, heading, subheading, details }: any) => {
           height: 100%;
           transform-style: preserve-3d;
           transition: transform 400ms ease;
-          box-shadow: 0px 0px 20px 3px rgba(255, 153, 102, 0.3);
-          border-radius: 12px;
+          box-shadow: 0px 0px 16px 2px rgba(255, 153, 102, 0.3);
+          border-radius: 10px;
         }
 
         .flip-front, .flip-back {
@@ -26,25 +24,22 @@ const FlipCard = ({ image, heading, subheading, details }: any) => {
           height: 100%;
           backface-visibility: hidden;
           -webkit-backface-visibility: hidden;
-          border-radius: 12px;
+          border-radius: 10px;
           overflow: hidden;
         }
 
         .flip-back {
           transform: rotateY(180deg);
-          width: 100%;
-          height: 100%;
           justify-content: center;
           display: flex;
           align-items: center;
-          overflow: hidden;
         }
 
         .flip-back::before {
           position: absolute;
           content: ' ';
           display: block;
-          width: 200px;
+          width: 160px;
           height: 180%;
           background: linear-gradient(90deg, transparent, #ff9966, #ff7744, #ff9966, transparent);
           animation: rotation_481 4000ms infinite linear;
@@ -55,12 +50,12 @@ const FlipCard = ({ image, heading, subheading, details }: any) => {
           width: 98%;
           height: 98%;
           background: linear-gradient(135deg, #fff9f5 0%, #ffe8d9 100%);
-          border-radius: 12px;
+          border-radius: 10px;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          padding: 30px;
+          padding: 20px;
           text-align: center;
         }
 
@@ -69,12 +64,8 @@ const FlipCard = ({ image, heading, subheading, details }: any) => {
         }
 
         @keyframes rotation_481 {
-          0% {
-            transform: rotateZ(0deg);
-          }
-          100% {
-            transform: rotateZ(360deg);
-          }
+          0% { transform: rotateZ(0deg); }
+          100% { transform: rotateZ(360deg); }
         }
 
         .flip-front {
@@ -85,19 +76,16 @@ const FlipCard = ({ image, heading, subheading, details }: any) => {
         .flip-front::after {
           content: '';
           position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.7) 100%);
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+          background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.7) 100%);
           pointer-events: none;
         }
 
         .flip-front .flip-front-content {
           position: absolute;
-          width: 100%;
-          height: 100%;
-          padding: 20px;
+          width: 100%; height: 100%;
+          padding: 14px;
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
@@ -105,37 +93,36 @@ const FlipCard = ({ image, heading, subheading, details }: any) => {
         }
 
         .flip-front-content .flip-badge {
-          background: linear-gradient(135deg, rgba(255, 153, 102, 0.9) 0%, rgba(234, 88, 12, 0.9) 100%);
-          padding: 8px 10px;
-          border-radius: 12px;
+          background: linear-gradient(135deg, rgba(255,153,102,0.9) 0%, rgba(234,88,12,0.9) 100%);
+          padding: 6px 8px;
+          border-radius: 8px;
           backdrop-filter: blur(10px);
           width: fit-content;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 10px rgba(0,0,0,0.25);
           transition: transform 0.3s ease;
         }
 
         .flip-card:hover .flip-badge {
-          transform: translateY(-5px);
+          transform: translateY(-4px);
         }
 
         .flip-title {
-          font-size: 14px;
+          font-size: 12px;
           font-weight: bold;
-          margin-bottom: 4px;
+          margin-bottom: 2px;
           color: #ffffff;
-          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+          text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         .flip-subtitle {
-          font-size: 13px;
+          font-size: 11px;
           color: #ffffffdd;
-          letter-spacing: 0.5px;
+          letter-spacing: 0.4px;
         }
 
         .flip-img {
           position: absolute;
-          width: 100%;
-          height: 100%;
+          width: 100%; height: 100%;
           object-fit: cover;
           object-position: center;
           z-index: 0;
@@ -146,50 +133,9 @@ const FlipCard = ({ image, heading, subheading, details }: any) => {
           transform: scale(1.05);
         }
 
-        .flip-circle {
-          width: 90px;
-          height: 90px;
-          border-radius: 50%;
-          background-color: #ffbb66;
-          position: absolute;
-          filter: blur(15px);
-          animation: floating 2600ms infinite linear;
-          opacity: 0.5;
-        }
-
-        #flip-bottom {
-          background-color: #ff8866;
-          left: 50px;
-          top: 0px;
-          width: 150px;
-          height: 150px;
-          animation-delay: -800ms;
-        }
-
-        #flip-right {
-          background-color: #ff2233;
-          left: 160px;
-          top: -80px;
-          width: 30px;
-          height: 30px;
-          animation-delay: -1800ms;
-        }
-
-        @keyframes floating {
-          0% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(10px);
-          }
-          100% {
-            transform: translateY(0px);
-          }
-        }
-
         .flip-details-text {
-          font-size: 15px;
-          line-height: 1.7;
+          font-size: 13px;
+          line-height: 1.6;
           color: #333333;
           font-weight: 400;
           z-index: 1;
@@ -218,4 +164,4 @@ const FlipCard = ({ image, heading, subheading, details }: any) => {
   );
 };
 
-export default FlipCard
+export default FlipCard;
