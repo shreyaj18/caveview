@@ -54,7 +54,7 @@ const Places = () => {
 
     return (
         <div className="py-12 md:py-20 bg-gradient-to-b from-orange-50 to-amber-50">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mx-4 md:mx-8 justify-items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mx-4 md:mx-8 justify-items-center">
                 {cards.map((card, index) => (
                     <FlipCard
                         key={index}
