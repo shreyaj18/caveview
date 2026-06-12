@@ -1,0 +1,9 @@
+# For all search engines
+User-agent: *
+Allow: /
+
+# Directives for languages/crawlers that support it
+Clean-param: igsh
+
+# Link to your sitemap (update this once you generate one)
+Sitemap: https://caveviewhomestay.com/sitemap.xml
