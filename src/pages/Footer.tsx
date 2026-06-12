@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-amber-950 text-white py-8 px-4">
       <div className="max-w-6xl mx-auto text-center">
-        <div className="flex justify-center"><img src="logo_img.png" className="w-auto h-10"/> </div>
+        <div className="flex justify-center"><img src="logo_img.png" className="w-auto h-10" alt="logo"/> </div>
              
         <h3 className="font-serif text-2xl font-semibold mb-2">Caveview Homestay</h3>
         <p className="text-gray-300 mb-4">Experience Heritage. Embrace Hospitality.</p>

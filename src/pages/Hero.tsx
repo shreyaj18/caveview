@@ -9,19 +9,17 @@ const Hero = () => {
     return (
         <section className="relative h-screen flex text-white items-center justify-center overflow-hidden">
             {/* Background Image Container */}
-            <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-50"
-                // Direct reference to the public folder root string path
-                style={{ backgroundImage: "url('/heroimg.webp')" }} 
-            >
-                <div className="absolute inset-0 bg-gradient-to-b from-foreground/60 via-foreground/40 to-foreground/60" />
-            </div>
+            <img
+                src="/heroimg.webp"
+                alt="Caveview Homestay"
+                className="absolute inset-0 w-full h-full object-cover brightness-50"
+            />
 
             <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in-up">
                 <h1 className="font-serif text-5xl md:text-7xl font-bold text-primary-foreground mb-6 tracking-tight">
                     Caveview Homestay
                 </h1>
-                
+
                 <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 font-light">
                     Experience the warmth of heritage hospitality in the heart of Badami
                 </p>
@@ -30,7 +28,7 @@ const Hero = () => {
                         className="bg-orange-600 px-5 py-2 hover:bg-orange-500/90 rounded-lg shadow-elevated transition-all duration-300 hover:scale-105"
                         onClick={() => scrollToSection('book')}
                     >
-                       Book Now
+                        Book Now
                     </button>
                     <button
                         className="bg-white/10 px-3 py-2 rounded-lg backdrop-blur-sm border-white/30 text-white hover:bg-white/20 transition-all duration-300"
